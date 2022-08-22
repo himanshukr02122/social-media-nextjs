@@ -1,5 +1,5 @@
-// import '../node_modules/'
-import '../sass/style.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '/sass/style.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
