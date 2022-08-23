@@ -2,18 +2,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, {Autoplay} from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
 
 export default function Home() {
+  SwiperCore.use([Autoplay])
   return (
       <>
-        <header className="topBar">
+        <header className="container topBar">
             <div className="sc-toggle__buttons">
               <i className="fa-solid fa-toggle-off sc-toggleBtn" id="btnOff"></i>
               <i className="fa-solid fa-toggle-on sc-toggleBtn display-none" id="btnOn"></i>
             </div>
-          <div className="pageTitle fw-bold">ARSHAKIR</div>
+          <div className="pageTitle fw-bold">ARSHAKI</div>
             <ul className="sc-nav__links ">
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,8 +50,8 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="sc-section">
-          <div className="sc-sec__desc col">
+        <div className="container sc-section">
+          <div className="sc-sec__desc">
             <h1>Increase your <br /> followers on <br /> social media</h1>
             <p>Yet bed any for travelling assistance indulgence unpleasing.
               Not thoughts all exercise blessings.
@@ -58,43 +60,71 @@ export default function Home() {
             <button type="button" className="btn sc-custom__btn btn-get__started">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             <div className="sc-followers">
               <div className="sc-followers_img">
-                <img src="./assets/images/ga-RBerxXPnZPE-unsplash.jpg" alt="img1" />
+                <img src="./assets/social-media-assets/2d" alt="img1" />
               </div>
               <div className="sc-followers_img">
-                <img src="./assets/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="img2" />
+                <img src="./assets/social-media-assets/3d" alt="img2" />
               </div>
               <div className="sc-followers_img">
-                <img src="./assets/images/mahdi-chaghari-0ShQCkRWIII-unsplash.jpg" alt="img3" />
+                <img src="./assets/social-media-assets/e0" alt="img3" />
               </div>
               <div className="sc-followers_img">
-                <img src="./assets/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="img4" />
+                <img src="./assets/social-media-assets/19fd" alt="img4" />
               </div>
               <div className="sc-followers_img">
-                <img src="./assets/images/mahdi-chaghari-0ShQCkRWIII-unsplash.jpg" alt="img5" />
+                <img src="./assets/social-media-assets/15e" alt="img5" />
               </div>
               <div className="sc-followers_img">
-                <img src="./assets/images/ga-RBerxXPnZPE-unsplash.jpg" alt="img6" />
+                <img src="./assets/social-media-assets/ad" alt="img6" />
               </div>
               <div className="sc-followers_img">12k+</div>
             </div>
             <p className="sc-followers-para">12000+ people already joined the arshakir's increase followers plan. Get started today!</p>
           </div>
-          <div className="sc-sec__img">
-            <img src="./assets/images/georgia-de-lotz-Ebb8fe-NZtM-unsplash.jpg" alt="sc_image" />
-          </div>
+          <img src="./assets/social-media-assets/Image.png" alt="sc_image" className="sc-section1__img" />
         </div>
+        <hr className="border border-gray" />
+        {/* Swiper section ******************************* */}
         <div className="sc-swiper__section">
           <h6 className="">Trusted By Over 100+ Startups and freelance business</h6>
           <Swiper
-            spaceBetween={10}
-            slidesPerView={4}
+            spaceBetween={20}
+            slidesPerView={2}
+            breakpoints= {{
+              767: {
+                slidesPerView: 3
+              },
+              992: {
+                slidesPerView: 5
+              },
+              1200: {
+                slidesPerView: 6,
+                spaceBetween: 12
+              },
+              1400: {
+                slidesPerView: 7,
+                spaceBetween: 16
+              }
+            }}
+            autoplay= {{
+              delay:2000
+            }}
+            className="sc-swiper__slide1"
           >
-            <SwiperSlide><img src="assets/icons/OZ_logo_color (3)-1.webp" alt="icon1" /></SwiperSlide>
-            <SwiperSlide><img src="assets/icons/oracle-512.webp" alt="icon2"/></SwiperSlide>
-            <SwiperSlide><img src="assets/icons/download.png" alt="icon3"/></SwiperSlide>
-            <SwiperSlide><div>SAMSUNG</div></SwiperSlide>
-            
-            <SwiperSlide><img src="assets/icons/download(1).png" alt="icon5" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/openzip.png" alt="icon1" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/oracle.png" alt="icon2"/></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/morphes.png" alt="icon3"/></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/samsung.png" alt="icon4"/></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/monday.png" alt="icon5" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/segment.png" alt="icon6" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/pronet.png" alt="icon7" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/openzip.png" alt="icon1" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/oracle.png" alt="icon2"/></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/morphes.png" alt="icon3"/></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/samsung.png" alt="icon4"/></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/monday.png" alt="icon5" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/segment.png" alt="icon6" /></SwiperSlide>
+            <SwiperSlide><img src="./assets/social-media-assets/logos/pronet.png" alt="icon7" /></SwiperSlide>
           </Swiper>
         </div>
       </>

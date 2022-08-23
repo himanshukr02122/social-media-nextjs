@@ -1,0 +1,28 @@
+.topBar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1.5rem 5rem;
+    @media (max-width:$breakpoint-sm) {
+        padding: 1rem 2rem;
+    }
+}
+.sc-nav__links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    @media (max-width:$breakpoint-lg) {
+        display: none;
+    }
+}.nav-link {font-size: small;}
+.sc-toggle__buttons {
+    position: absolute;
+    right: 2rem;
+    .sc-toggleBtn {
+        font-size: 28px;
+    }
+    @media (min-width: $breakpoint-lg) {
+        display: none;
+    }
+}
