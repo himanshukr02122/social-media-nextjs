@@ -1,16 +1,43 @@
 .sc-section {
     position: relative;
-    padding: 2rem 3rem 2rem 5rem;
+    padding: 2rem 0 2rem 0;
     .sc-sec__desc {
-        margin-top: 3rem;
+        position: relative;
+        margin-top: 2rem;
         width: 50%;
         padding-right: 5rem;
+        @media (max-width: $breakpoint-lg) {
+            width: 60%;
+            margin-top: 1rem;
+        }
+        @media (max-width: $breakpoint-md) {
+            width: 65%;
+            margin-top: -1rem;
+        }
+        @media (max-width: $breakpoint-md) {
+            z-index: 5;
+            width: 90%;
+            margin-top: -1rem;
+        }
         h1 {
             font-size: var(--text-7xl);
             font-weight: 400;
+            @media (max-width: $breakpoint-lg) {
+                font-size: var(--text-5xl);
+            }
+            @media (max-width: $breakpoint-md) {
+                font-size: var(--text-3xl);    
+            }
+            @media (max-width: $breakpoint-sm) {
+                font-size: var(--text-2xl); 
+                margin-bottom: 0.5rem;   
+            }
         }
         p {
             font-size: var(--text-sm);
+            @media (max-width: $breakpoint-md) {
+                font-size: var(--text-xs);
+            }
         }
         .btn-get__started {
             margin-left: 0;
@@ -66,6 +93,9 @@
             position: relative;
             margin-top: 5rem;
             width: 22rem;
+            @media (max-width: $breakpoint-sm) {
+                width: 100%;
+            }
         }
     }
     .sc-section1__img {
@@ -73,5 +103,15 @@
         width: 75%;
         top: -6rem;
         right: -6rem;
+        @media (max-width: $breakpoint-xl) {
+            top: -2rem;
+        }
+        @media (max-width: $breakpoint-md) {
+            right: -3rem;
+        }
+        @media (max-width: $breakpoint-sm) {
+            z-index: 0;
+            right: 0;
+        }
     }
 }

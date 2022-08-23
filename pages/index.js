@@ -7,11 +7,13 @@ import SwiperCore, {Autoplay} from 'swiper';
 import 'swiper/css';
 
 const IncreaseFollowers=(props)=> {
+    const imgName="./assets/social-media-assets/icons/"+props.srcUrl;
   return(
     <>
-      <img src="./assets/social-media-assets/icons/secure.png" alt="100% secure"/>
-      <h3 className="fw-normal">100% Secure</h3>
-      <p className="text-xs">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptatem excepturi non magni possimus dicta optio at soluta eveniet laudantium!</p>
+      <div style={{width:"100px", height: "50px"}}><img src={imgName} alt="100% secure" className="mb-2" />
+      </div>
+      <h3 className="fw-normal my-2 my-xxl-3 fs-4">{props.title}</h3>
+      <p className="sc-if__para">{props.card_desc}</p>
     </>
   );
 }
@@ -22,12 +24,12 @@ export default function Home() {
       <>
         <div className="container sc-section">
           <div className="sc-sec__desc">
-            <h1>Increase your <br /> followers on <br /> social media</h1>
+            <h1 className="mb-md-1 mb-xl-2">Increase your followers on social media</h1>
             <p>Yet bed any for travelling assistance indulgence unpleasing.
               Not thoughts all exercise blessings.
               Indulgence way everything joy alteration boisterous the attachment.
             </p>
-            <button type="button" className="btn sc-custom__btn btn-get__started">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" className="btn sc-custom__btn btn-get__started mt-lg-2 ">Get Started <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             <div className="sc-followers">
               <div className="sc-followers_img">
                 <img src="./assets/social-media-assets/2d" alt="img1" />
@@ -79,7 +81,7 @@ export default function Home() {
             autoplay= {{
               delay:2000
             }}
-            className="sc-swiper__slide1"
+            className="sc-swiper__slide1 container"
           >
             <SwiperSlide><img src="./assets/social-media-assets/logos/openzip.png" alt="icon1" /></SwiperSlide>
             <SwiperSlide><img src="./assets/social-media-assets/logos/oracle.png" alt="icon2"/></SwiperSlide>
@@ -100,14 +102,20 @@ export default function Home() {
         <hr className="border m-0"/>
         <img src="./assets/social-media-assets/Decore.png" alt="decore" style={{width:"100%"}} />
         <div className="container">
-            <h3 className="mt-5 fw-normal col-5">One platform to increase followers on all social media.</h3>
-            <div className="row">
-              <div className="col-3">
-                <IncreaseFollowers />
+            <h3 className="mt-5 fw-normal col-12 col-sm-9 col-md-6 text-6xl">One platform to increase followers on all social media.</h3>
+            <div className="row mt-5">
+              <div className="col-6 col-sm-3">
+                <IncreaseFollowers srcUrl="secure.png" title="100% Secure" card_desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptatem excepturi non magni possimus dicta optio at soluta eveniet laudantium!" />
               </div>
-              <div className="col-3"></div>
-              <div className="col-3"></div>
-              <div className="col-3"></div>
+              <div className="col-6 col-sm-3">
+                <IncreaseFollowers srcUrl="no-cookies.png" title="No Cookies Required" card_desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptatem excepturi non magni possimus dicta optio at soluta eveniet laudantium!" />
+              </div>
+              <div className="col-6 col-sm-3">
+                <IncreaseFollowers srcUrl="login.png" title="Login Info Not Required" card_desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptatem excepturi non magni possimus dicta optio at soluta eveniet laudantium!" />
+              </div>
+              <div className="col-6 col-sm-3">
+                <IncreaseFollowers srcUrl="moneyback.png" title="Moneyback Guarantee " card_desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptatem excepturi non magni possimus dicta optio at soluta eveniet laudantium!" />
+              </div>
             </div>
         </div>
       </>
