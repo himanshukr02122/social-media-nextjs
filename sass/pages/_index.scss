@@ -4,6 +4,15 @@
 .display-block {
     display: block;
 }
+.fs54px {
+    font-size: 54px;
+    @media (max-width: $breakpoint-lg) {
+        font-size: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+        font-size: 32px;
+    }
+}
 .btn-set {
     @media (max-width: $breakpoint-lg) {
         display: none;
@@ -162,4 +171,39 @@
             }
         }
     }
+}
+
+// Accordion section ************************************************************
+.sc-accordion__section {
+    font-size: 18px;
+    p {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        color: var(--color-primary);
+        font-weight: bold;
+        padding: 0;
+        i {
+            margin-left: 0.5rem;
+        }
+    }
+    .accordion {
+        .accordion-item {
+            border-color: rgb(194, 190, 190) !important;
+            // .accordion-button::after {
+            //     background-image: url("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>") !important;
+            // }
+        }
+    }
+}
+// subscribe section 
+.sc-subscribe__section {
+    width: 100%;
+    min-height: 90vh;
+    background: url('../../public/assets/social-media-assets/Mask\ Group\ 1.jpg') no-repeat center;
+    background-size: cover;
+    margin-top: 5rem;
 }

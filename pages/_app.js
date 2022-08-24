@@ -1,7 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import '/sass/style.scss'
 import Head from 'next/head'
 import Layout from '../components/Layout/Layout'
+// import useSWR from 'swr'
 
 
 function MyApp({ Component, pageProps }) {
