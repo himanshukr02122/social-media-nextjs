@@ -14,5 +14,10 @@ $(document).ready(function(){
     e.preventDefault();
     const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const email = document.getElementById("email").value;
-    alert(email);
+    if(email.match(validRegex)) {
+      alert('true');
+    }
+    else {
+      alert('false');
+    }
   })

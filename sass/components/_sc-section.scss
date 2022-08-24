@@ -1,4 +1,5 @@
-.sc-section {
+
+.sc-banner {
     position: relative;
     padding: 2rem 0 2rem 0;
     .sc-sec__desc {
@@ -12,12 +13,15 @@
         }
         @media (max-width: $breakpoint-md) {
             width: 65%;
-            margin-top: -1rem;
-        }
-        @media (max-width: $breakpoint-md) {
-            z-index: 5;
-            width: 90%;
-            margin-top: -1rem;
+            margin-top: 1rem;
+            padding: 0 1rem;
+        }  
+        @media (max-width: $breakpoint-sm ) {
+            width: 100%;
+        } 
+        @media (min-width: 1400px) {
+            width: 100%;
+            padding-right: 0;
         }
         h1 {
             font-size: var(--text-7xl);
@@ -107,11 +111,17 @@
             top: -2rem;
         }
         @media (max-width: $breakpoint-md) {
-            right: -3rem;
+            position: relative;
+            width: 100%;
+            // margin: auto;
+            // right: 0;
         }
         @media (max-width: $breakpoint-sm) {
             z-index: 0;
             right: 0;
+        }
+        @media (min-width: $breakpoint-xxl) {
+            width: 65%;
         }
     }
 }

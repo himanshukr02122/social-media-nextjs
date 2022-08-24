@@ -4,6 +4,9 @@
 .display-block {
     display: block;
 }
+.sc-section {
+    padding: 75px 0;
+}
 .fs54px {
     font-size: 54px;
     @media (max-width: $breakpoint-lg) {
@@ -101,14 +104,6 @@
     }
 }
 
-.img100 {
-    width: 100%;
-    // @media (max-width: $breakpoint-sm) {
-    //     position: absolute;
-    //     z-index: 0;
-    //     width: 20rem;
-    // }
-}
 // testimonial section *************************************************************
 .sc-testimonial {
     margin-bottom: 2rem;
@@ -121,7 +116,6 @@
         z-index: 0;
         padding-top: 2rem;
         .sc-testinomial__card {
-            width: 18rem;
             z-index: 1;
             .sc-testinomial__card-icon {
                 position: absolute;
@@ -155,7 +149,7 @@
                 align-items: center;
                 padding: 0.5rem 1rem;
                 .sc-user__id {
-                    margin-left: 0.5rem;
+                    margin-left: 1rem;
                     span {
                         font-size: small;
                         &:nth-child(3) {
@@ -164,8 +158,8 @@
                     }
                 }
                 img {
-                    width: 2rem;
-                    height: 2rem;
+                    width: 3rem;
+                    height: 3rem;
                     border-radius: 2rem;
                 }
             }
@@ -193,28 +187,35 @@
     .accordion {
         .accordion-item {
             border-color: rgb(194, 190, 190) !important;
-            // .accordion-button::after {
-            //     background-image: url("<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>") !important;
-            // }
         }
     }
 }
-// subscribe section 
-.sc-subscribe__section {
-    width: 100%;
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
+
+#overlay {
+    position: absolute; 
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,255,0.25); 
+    z-index: 2; 
+    cursor: pointer;
+}
+.sc-subscribe__bgImg {
+    position: relative;
     background: url('../../public/assets/social-media-assets/Mask\ Group\ 1.jpg') no-repeat center;
-    background-size: cover;
-    margin-top: 5rem;
+}
+.sc-subscribe__section {
+    padding: 4rem 0;
     .sc-email__block {
         position: relative;
+        z-index: 3;
         background: #8803fc;
         border-radius: 0.6rem;
         width: 30rem;
-        padding: 4rem 2rem 3rem 3rem;
-        margin-left: 121px;
+        padding: 3rem;
         color: #fff;
         .sc-email__h6 {
             font-size: 14px;
@@ -253,5 +254,37 @@
                 }
             }
         }
+    }
+}
+
+// waitlist section **********************************
+.sc-waitlist__heading {
+    font-size: 53px;
+    @media (max-width: $breakpoint-lg) {
+        font-size: 40px;
+    }
+    @media (max-width: $breakpoint-md) {
+        font-size: 36px;
+    }
+    @media (max-width: $breakpoint-sm) {
+        font-size: 28px;
+    }
+}
+.sc-waitlist__btn {
+    background: #F9896B;
+    border-radius: 5px;
+    font-weight: 600;
+    height: 48px;
+    margin-top: 10px;
+    border: none;
+    @media (max-width: $breakpoint-md) {
+        font-size: 14px;
+        height: 40px;
+    }
+    i {
+        margin-left: 12px;
+        @media (max-width: $breakpoint-md) {
+            margin-left: 8px;
+        }   
     }
 }

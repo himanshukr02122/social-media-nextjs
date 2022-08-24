@@ -2,44 +2,50 @@ import React from 'react'
 
 export default function Header() {
   return (
-        <header className="container topBar">
-          <div className="sc-toggle__buttons">
-            <i className="fa-solid fa-toggle-off sc-toggleBtn" id="btnOff"></i>
-            <i className="fa-solid fa-toggle-on sc-toggleBtn display-none" id="btnOn"></i>
-          </div>
-          <div className="pageTitle fw-bold">ARSHAKI</div>
-            <ul className="sc-nav__links ">
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Product 
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a className="dropdown-item" href="#">Action</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
+          <nav className="navbar navbar-expand-lg sc-navbar">
+            <div className="container-fluid px-5 py-3">
+              <a className="navbar-brand sc-navbar__brand" href="#">ARSHAKI</a>
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ms-auto mb-2 mb-lg-0 sc-navbar__lists">
+                  <li class="nav-item dropdown sc-nav__list">
+                    <a class="nav-link dropdown-toggle sc-navbar__link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Product
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item sc-nav__list dropdown">
+                    <a class="nav-link sc-navbar__link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Packages
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider" /></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li className="nav-item sc-nav__list">
+                    <a className="nav-link sc-navbar__link" href="#">Blog</a>
+                  </li>
+                  <li className="nav-item sc-nav__list">
+                    <a className="nav-link sc-navbar__link" href="#">Testimonials</a>
+                  </li>
+                  <li className="nav-item sc-nav__list">
+                    <button type="button" className="btn sc-custom__btn mt-lg-2 sc-sf__btn">Start Free </button>
+                  </li>
                 </ul>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Packages 
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a className="dropdown-item" href="#">Action</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Blogs</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Tesinimonials</a>
-              </li>
-            </ul>
-          <div className="btn-set">
-            <button type="button" className="btn btn-bg__light">Log in</button>
-            <button type="button" className="btn sc-custom__btn outline-none">Start Free</button>
-          </div>
-        </header>
+                <button type="button" className="btn mt-lg-2 ">Sign In </button>
+                
+              </div>
+            </div>
+          </nav>
   )
 }
