@@ -72,3 +72,94 @@
         font-size: medium;
     }
 }
+
+//  start free(buttons) *********************************************************
+.sm-active__followers {
+    position: relative;
+    .sc-start__free {
+        justify-content: center;
+        z-index: 5;
+        .btn-start__free {
+            width: max-content;
+            margin-left: 0;
+        }
+        @media (max-width: $breakpoint-sm) {
+            width: 100%;
+            p {
+                font-size: var(--text-xs);
+            }
+        }
+    }
+}
+
+.img100 {
+    width: 100%;
+    // @media (max-width: $breakpoint-sm) {
+    //     position: absolute;
+    //     z-index: 0;
+    //     width: 20rem;
+    // }
+}
+// testimonial section *************************************************************
+.sc-testimonial {
+    margin-bottom: 2rem;
+    z-index: 0;
+    .sc-testimonial__title {
+        color: var(--color-grey);
+    }
+    .sc-swiper__slide2 {
+        position: relative;
+        z-index: 0;
+        padding-top: 2rem;
+        .sc-testinomial__card {
+            width: 18rem;
+            z-index: 1;
+            .sc-testinomial__card-icon {
+                position: absolute;
+                z-index: 10;
+                top: -1.2rem;
+                left: 1rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                background: var(--color-primary);
+                color: #fff;
+                font-size: 1.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2rem;
+            }
+            .sc-testimonial__ratings {
+                text-align: left;
+                margin: 2.5rem 1rem 0.5rem;
+                color: var(--color-pink);
+            }
+            .sc-testimonial__feedback {
+                text-align: left;
+                margin-left: 1rem;
+                font-size: small;
+                color: var(--color-grey);
+            }
+            .sc-happy__user {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0.5rem 1rem;
+                .sc-user__id {
+                    margin-left: 0.5rem;
+                    span {
+                        font-size: small;
+                        &:nth-child(3) {
+                            color: var(--color-grey);
+                        }
+                    }
+                }
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 2rem;
+                }
+            }
+        }
+    }
+}
